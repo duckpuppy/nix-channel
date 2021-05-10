@@ -27,7 +27,7 @@ jobs:
         # For this to work, you also need to set the CACHIX_SIGNING_KEY secret
         # in your repository settings in Github found at https://github.com/<your_githubname>/nur-packages/settings/secrets
         cachixName:
-          - <YOUR_CACHIX_NAME>
+          - duckpuppy
         nixPath:
           - nixpkgs=channel:nixos-unstable
           - nixpkgs=channel:nixpkgs-unstable
@@ -44,7 +44,7 @@ jobs:
       run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
     - name: Setup cachix
       uses: cachix/cachix-action@v8
-      if: ${{ matrix.cachixName != '<YOUR_CACHIX_NAME>' }}
+      if: ${{ matrix.cachixName != 'duckpuppy' }}
       with:
         name: ${{ matrix.cachixName }}
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
