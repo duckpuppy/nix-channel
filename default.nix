@@ -15,6 +15,5 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   base16-shell = pkgs.callPackage ./pkgs/base16-shell { };
-  # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
-  # ...
+  ls-colors = pkgs.callPackage ./pkgs/ls-colors { inherit pkgs; };
 }
