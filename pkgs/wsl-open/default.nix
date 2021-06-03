@@ -12,10 +12,6 @@ stdenv.mkDerivation rec {
     rev = "6419bb63845acd0533f30bdc8258f8df5fbb25cb";
     sha256 = "00d2f7cw5mqj6czidlc6xwih0id33kf9c94k8nis28k0fw6s8ska";
   };
-#   src = fetchGit {
-#     url = "https://gitlab.com/4U6U57/wsl-open.git";
-#     ref = "refs/heads/master";
-#   };
   buildInputs = [ makeWrapper ];
   installPhase = ''
     mkdir -p $out/bin
