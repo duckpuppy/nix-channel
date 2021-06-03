@@ -14,6 +14,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  aws-ssm-tools = pkgs.callPackage ./pkgs/aws-ssm-tools { };
   base16-shell = pkgs.callPackage ./pkgs/base16-shell { };
   ls-colors = pkgs.callPackage ./pkgs/ls-colors { inherit pkgs; };
   _3llo = pkgs.callPackage ./pkgs/3llo { inherit pkgs; };
