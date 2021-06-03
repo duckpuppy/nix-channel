@@ -19,4 +19,5 @@
   ls-colors = pkgs.callPackage ./pkgs/ls-colors { inherit pkgs; };
   _3llo = pkgs.callPackage ./pkgs/3llo { inherit pkgs; };
   vault-aws-creds = pkgs.callPackage ./pkgs/vault-aws-creds { };
+  wsl-open = pkgs.callPackage ./pkgs/wsl-open { };
 }
