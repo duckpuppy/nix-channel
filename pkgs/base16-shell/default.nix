@@ -1,13 +1,11 @@
-{ stdenv, fetchFromGitHub }:
+{ stdenv, fetchFromGitHub, sources ? import ../../nix/sources.nix }:
 
+let
+  base16-shell-src = sources.base16-shell;
+in
 stdenv.mkDerivation {
   name = "base16-shell";
-  src = fetchFromGitHub {
-    owner = "chriskempson";
-    repo = "base16-shell";
-    rev = "master";
-    sha256 = "1yj36k64zz65lxh28bb5rb5skwlinixxz6qwkwaf845ajvm45j1q";
-  };
+  src = base16-shell-src;
   installPhase = ''
      mkdir -p $out/share/base16-shell
      cp -r * $out/share/base16-shell/

@@ -1,16 +1,11 @@
-{ lib, stdenv, fetchFromGitHub }:
+{ lib, stdenv, fetchFromGitHub, sources ? import ../../nix/sources.nix }:
 let
-  version = "0.2.9";
+  version = sources.vault-aws-creds.version;
 in
   stdenv.mkDerivation {
     inherit version;
-    name = "vault-aws-creds";
-    src = fetchFromGitHub {
-      owner = "jantman";
-      repo = "vault-aws-creds";
-      rev = "338a1d2b4b653c83452de4842a4bf811958a94a3";
-      sha256 = "116q9ya4z70vcjhb6ibrdzv8prh8kk9adhwf3blffs4h2xrjvixb";
-    };
+    pname = "vault-aws-creds";
+    src = sources.vault-aws-creds;
     installPhase = ''
       mkdir -p $out/bin $out/share/vault-aws-creds
       cp $src/*.py $out/share/vault-aws-creds

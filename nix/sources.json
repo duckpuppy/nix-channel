@@ -1,0 +1,89 @@
+{
+    "LS_COLORS": {
+        "branch": "master",
+        "description": "A collection of LS_COLORS definitions; needs your contribution!",
+        "homepage": "",
+        "owner": "trapd00r",
+        "repo": "LS_COLORS",
+        "rev": "2957904dbd4156b7980e3450233f811073132023",
+        "sha256": "1wnzaay4r6sbqnxylpc31pwsq89km8y5f9caf0fq60lfabg139g3",
+        "type": "tarball",
+        "url": "https://github.com/trapd00r/LS_COLORS/archive/2957904dbd4156b7980e3450233f811073132023.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "base16-shell": {
+        "branch": "master",
+        "description": "Base16 for Shells",
+        "homepage": "https://github.com/chriskempson/base16",
+        "owner": "chriskempson",
+        "repo": "base16-shell",
+        "rev": "ce8e1e540367ea83cc3e01eec7b2a11783b3f9e1",
+        "sha256": "1yj36k64zz65lxh28bb5rb5skwlinixxz6qwkwaf845ajvm45j1q",
+        "type": "tarball",
+        "url": "https://github.com/chriskempson/base16-shell/archive/ce8e1e540367ea83cc3e01eec7b2a11783b3f9e1.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "moar": {
+        "branch": "master",
+        "description": "Moar is a pager. It's designed to just do the right thing without any configuration.",
+        "homepage": "",
+        "owner": "walles",
+        "repo": "moar",
+        "rev": "77f4b0aebe1aff0ef6f63a445e8bbfdd9a1909bb",
+        "sha256": "19q0w0384qr8zygl5jg3f28hp8p54cadf2fismcpbd360l11ivz9",
+        "type": "tarball",
+        "url": "https://github.com/walles/moar/archive/v1.8.1.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<version>.tar.gz",
+        "version": "v1.8.2"
+    },
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "65a61b147f307d24bfd0a5cd56ce7d7b7cc61d2e",
+        "sha256": "17mirpsx5wyw262fpsd6n6m47jcgw8k2bwcp1iwdnrlzy4dhcgqh",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/65a61b147f307d24bfd0a5cd56ce7d7b7cc61d2e.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "release-20.03",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "eb73405ecceb1dc505b7cbbd234f8f94165e2696",
+        "sha256": "06k21wbyhhvq2f1xczszh3c2934p0m02by3l2ixvd6nkwrqklax7",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/eb73405ecceb1dc505b7cbbd234f8f94165e2696.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "vault-aws-creds": {
+        "branch": "master",
+        "description": "Python helper to export Vault-provided temporary AWS creds into the environment",
+        "homepage": null,
+        "owner": "jantman",
+        "repo": "vault-aws-creds",
+        "rev": "338a1d2b4b653c83452de4842a4bf811958a94a3",
+        "sha256": "116q9ya4z70vcjhb6ibrdzv8prh8kk9adhwf3blffs4h2xrjvixb",
+        "type": "tarball",
+        "url": "https://github.com/jantman/vault-aws-creds/archive/0.2.9.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<version>.tar.gz",
+        "version": "0.2.9"
+    },
+    "wsl-open": {
+        "branch": "master",
+        "description": "Open files with xdg-open on Bash for Windows in Windows applications. Read only mirror from GitLab, see link :point_right:",
+        "homepage": "http://gitlab.com/4U6U57/wsl-open",
+        "owner": "4U6U57",
+        "repo": "wsl-open",
+        "rev": "6419bb63845acd0533f30bdc8258f8df5fbb25cb",
+        "sha256": "00d2f7cw5mqj6czidlc6xwih0id33kf9c94k8nis28k0fw6s8ska",
+        "type": "tarball",
+        "url": "https://github.com/4U6U57/wsl-open/archive/v2.2.1.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<version>.tar.gz",
+        "version": "v2.2.1"
+    }
+}

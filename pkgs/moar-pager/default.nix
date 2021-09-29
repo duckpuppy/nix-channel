@@ -1,16 +1,12 @@
-{ lib, buildGoModule, fetchFromGitHub }:
+{ lib, buildGoModule, fetchFromGitHub, sources ? import ../../nix/sources.nix }:
 
 let
+  moar-pager-src = sources.moar;
   moar-pager = buildGoModule rec {
     pname = "moar";
-    version = "1.8.1";
+    version = sources.moar.version;
 
-    src = fetchFromGitHub {
-      owner = "walles";
-      repo = "moar";
-      rev = "v1.8.1";
-      sha256 = "19q0w0384qr8zygl5jg3f28hp8p54cadf2fismcpbd360l11ivz9";
-    };
+    src = moar-pager-src;
 
     vendorSha256 = "0zhjbs8n1321307y17sjnmz4j1kzjpn4m2q27v8a9kvd0m8i73p8";
 
