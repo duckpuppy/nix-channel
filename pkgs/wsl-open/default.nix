@@ -2,16 +2,12 @@
 , lib
 , makeWrapper
 , fetchFromGitLab
+, sources ? import ../../nix/sources.nix
 }:
 stdenv.mkDerivation rec {
   pname = "wsl-open";
-  version = "2.2.1";
-  src = fetchFromGitLab {
-    owner = "4U6U57";
-    repo = "wsl-open";
-    rev = "6419bb63845acd0533f30bdc8258f8df5fbb25cb";
-    sha256 = "00d2f7cw5mqj6czidlc6xwih0id33kf9c94k8nis28k0fw6s8ska";
-  };
+  version = sources.wsl-open.version;
+  src = sources.wsl-open;
   buildInputs = [ makeWrapper ];
   installPhase = ''
     mkdir -p $out/bin
