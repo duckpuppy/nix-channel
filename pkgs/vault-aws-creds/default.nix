@@ -1,11 +1,19 @@
-{ lib, stdenv, fetchFromGitHub, sources ? import ../../nix/sources.nix }:
+{ pkgs, lib, stdenv, fetchFromGitHub, sources ? import ../../nix/sources.nix }:
 let
   version = sources.vault-aws-creds.version;
 in
-  stdenv.mkDerivation {
+  pkgs.python3Packages.buildPythonApplication rec {
     inherit version;
     pname = "vault-aws-creds";
+    format = "other";
+
+    nativeBuildInputs = [
+      pkgs.makeWrapper
+    ];
+
     src = sources.vault-aws-creds;
+
+    buildPhase = "";
     installPhase = ''
       mkdir -p $out/bin $out/share/vault-aws-creds
       cp $src/*.py $out/share/vault-aws-creds
