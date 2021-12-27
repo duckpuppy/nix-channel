@@ -23,6 +23,18 @@
         "url": "https://github.com/chriskempson/base16-shell/archive/ce8e1e540367ea83cc3e01eec7b2a11783b3f9e1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "lspsaga.nvim": {
+        "branch": "main",
+        "description": "till  glepnir goes back online",
+        "homepage": "",
+        "owner": "tami5",
+        "repo": "lspsaga.nvim",
+        "rev": "55979c8390037615c21ac109f538189316cfef18",
+        "sha256": "0nx7b9bn2n7r7y2xs86ldl71v68knx881fch0g28pxvks332sk4r",
+        "type": "tarball",
+        "url": "https://github.com/tami5/lspsaga.nvim/archive/55979c8390037615c21ac109f538189316cfef18.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "moar": {
         "branch": "master",
         "description": "Moar is a pager. It's designed to just do the right thing without any configuration.",
@@ -58,6 +70,18 @@
         "sha256": "06k21wbyhhvq2f1xczszh3c2934p0m02by3l2ixvd6nkwrqklax7",
         "type": "tarball",
         "url": "https://github.com/NixOS/nixpkgs/archive/eb73405ecceb1dc505b7cbbd234f8f94165e2696.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "null-ls.nvim": {
+        "branch": "main",
+        "description": "Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.",
+        "homepage": "",
+        "owner": "jose-elias-alvarez",
+        "repo": "null-ls.nvim",
+        "rev": "b7de45a0e62bf93f19db2b43ecded48c5763248d",
+        "sha256": "05mvqgk1a9ljqxg4zpd0a37wqpns7n1mb8dhm75ihr3wbqz4hbgm",
+        "type": "tarball",
+        "url": "https://github.com/jose-elias-alvarez/null-ls.nvim/archive/b7de45a0e62bf93f19db2b43ecded48c5763248d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vault-aws-creds": {

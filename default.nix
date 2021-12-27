@@ -21,4 +21,6 @@
   vault-aws-creds = pkgs.callPackage ./pkgs/vault-aws-creds { };
   wsl-open = pkgs.callPackage ./pkgs/wsl-open { };
   moar = pkgs.callPackage ./pkgs/moar-pager { };
+  null-ls-nvim = pkgs.callPackage ./pkgs/null-ls-nvim { };
+  lspsaga-nvim = pkgs.callPackage ./pkgs/lspsaga-nvim { };
 }
