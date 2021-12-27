@@ -1,9 +1,9 @@
 { pkgs ? import <nixpkgs> { }, lib, buildGoModule, fetchFromGitHub, sources ? import ../../nix/sources.nix }:
 
 let
-  lspsaga-nvim = pkgs.vimUtils.buildVimPluginFrom2Nix rec {
+  tami5-lspsaga-nvim = pkgs.vimUtils.buildVimPluginFrom2Nix rec {
     name = "lspsaga-nvim";
     src = sources."lspsaga.nvim";
   };
 in
-lspsaga-nvim
+tami5-lspsaga-nvim
