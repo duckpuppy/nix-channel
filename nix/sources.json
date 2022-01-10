@@ -97,6 +97,18 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<version>.tar.gz",
         "version": "0.2.9"
     },
+    "wordle-cli": {
+        "branch": "main",
+        "description": "Play Wordle on the command line, or solve it.",
+        "homepage": "",
+        "owner": "klipspringr",
+        "repo": "wordle-cli",
+        "rev": "290f3ca7c06bfee16e8ecdd380090b16eccfaff4",
+        "sha256": "0jfiqc50xcfhxmj7rfsp78c23dccvrh8l2x5in4d5vgd41ah4kan",
+        "type": "tarball",
+        "url": "https://github.com/klipspringr/wordle-cli/archive/290f3ca7c06bfee16e8ecdd380090b16eccfaff4.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "wsl-open": {
         "branch": "master",
         "description": "Open files with xdg-open on Bash for Windows in Windows applications. Read only mirror from GitLab, see link :point_right:",

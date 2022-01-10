@@ -23,4 +23,5 @@
   moar = pkgs.callPackage ./pkgs/moar-pager { };
   null-ls-nvim = pkgs.callPackage ./pkgs/null-ls-nvim { };
   tami5-lspsaga-nvim = pkgs.callPackage ./pkgs/lspsaga-nvim { };
+  wordle-cli = pkgs.callPackage ./pkgs/wordle-cli { };
 }
