@@ -1,11 +1,8 @@
 { pkgs, lib, stdenv, fetchFromGitHub, sources ? import ../../nix/sources.nix }:
-let
-  version = sources.vault-aws-creds.version;
-in
 pkgs.python3Packages.buildPythonApplication rec {
-  inherit version;
   pname = "wordle-cli";
   format = "other";
+  version = "0.1.0";
 
   nativeBuildInputs = [
     pkgs.makeWrapper
