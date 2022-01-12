@@ -1,8 +1,8 @@
-with import <nixpkgs> {};
+with import <nixpkgs> { };
 stdenv.mkDerivation {
   name = "env";
   buildInputs = [
-    ruby.devEnv
+    ruby_3_1
     pkg-config
     bundix
   ];

@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> { } }:
 
 with pkgs;
 bundlerApp {
@@ -9,7 +9,7 @@ bundlerApp {
 
   gemset = import ./gemset.nix;
 
-  inherit ruby;
+  ruby = pkgs.ruby_3_1;
 
   exes = [ "3llo" ];
 

@@ -5,10 +5,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1155js715m8jy8yvswif3kgf22pw1fpgqq4kq65ab3464pif8smh";
+      sha256 = "1w327skga2lpq9rbqqxy6w1r6k9k1l8prk5wmzrycvydn1wp7jk2";
       type = "gem";
     };
-    version = "1.2.0";
+    version = "1.3.1";
   };
   pastel = {
     dependencies = ["tty-color"];
