@@ -9,7 +9,7 @@ bundlerApp {
 
   gemset = import ./gemset.nix;
 
-  ruby = pkgs.ruby_3_1;
+  ruby = pkgs.ruby_3_0;
 
   exes = [ "3llo" ];
 
