@@ -24,4 +24,6 @@
   null-ls-nvim = pkgs.callPackage ./pkgs/null-ls-nvim { };
   tami5-lspsaga-nvim = pkgs.callPackage ./pkgs/lspsaga-nvim { };
   wordle-cli = pkgs.callPackage ./pkgs/wordle-cli { };
+  prettier-nvim = pkgs.callPackage ./pkgs/prettier-nvim { };
+  # inherit (pkgs.callPackage ./pkgs/alks { }) alks;
 }

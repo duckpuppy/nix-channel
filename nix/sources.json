@@ -78,10 +78,22 @@
         "homepage": "",
         "owner": "jose-elias-alvarez",
         "repo": "null-ls.nvim",
-        "rev": "b7de45a0e62bf93f19db2b43ecded48c5763248d",
-        "sha256": "05mvqgk1a9ljqxg4zpd0a37wqpns7n1mb8dhm75ihr3wbqz4hbgm",
+        "rev": "18497120fa0db0a3b9e53870ac8f342be4bffb57",
+        "sha256": "13x9ajlf3hf1rivwl96fmy4l1lk16igd7hj72wcwfgzamnvjczsi",
         "type": "tarball",
-        "url": "https://github.com/jose-elias-alvarez/null-ls.nvim/archive/b7de45a0e62bf93f19db2b43ecded48c5763248d.tar.gz",
+        "url": "https://github.com/jose-elias-alvarez/null-ls.nvim/archive/18497120fa0db0a3b9e53870ac8f342be4bffb57.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "prettier.nvim": {
+        "branch": "main",
+        "description": "Prettier plugin for Neovim's built-in LSP client.",
+        "homepage": "",
+        "owner": "MunifTanjim",
+        "repo": "prettier.nvim",
+        "rev": "918b99f5ddd7a56395fd393767ab6a3c15a50789",
+        "sha256": "1q1klb7yfpxpwc8q0czfnlnz9b5jcwirq0f7xqqzrash1pb2ykq6",
+        "type": "tarball",
+        "url": "https://github.com/MunifTanjim/prettier.nvim/archive/918b99f5ddd7a56395fd393767ab6a3c15a50789.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vault-aws-creds": {
