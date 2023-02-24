@@ -30,7 +30,8 @@
           };
         in
         {
-          inherit simple typescript;
+          inherit simple;
+          inherit typescript;
           default = simple;
         };
     };
