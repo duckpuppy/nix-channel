@@ -28,7 +28,7 @@
             path = ./templates/devenv-ts;
             description = "Minimal TypeScript project using devenv.";
           };
-          defaultTemplate = self.templates.simple;
+          default = self.templates.simple;
         };
     };
 }
