@@ -19,7 +19,7 @@
       });
 
       templates =
-        let
+        {
           simple = {
             path = ./templates/devenv-simple;
             description = "A basic direnv supported Nix flake with devenv integration.";
@@ -28,10 +28,6 @@
             path = ./templates/devenv-ts;
             description = "Minimal TypeScript project using devenv.";
           };
-        in
-        {
-          inherit simple;
-          inherit typescript;
           default = simple;
         };
     };
