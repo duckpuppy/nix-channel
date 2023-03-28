@@ -12,7 +12,7 @@
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
-  overlays = import ./overlays; # nixpkgs overlays
+  overlays = import ./overlays { inherit pkgs; }; # nixpkgs overlays
 
   aws-ssm-tools = pkgs.callPackage ./pkgs/aws-ssm-tools { };
   base16-shell = pkgs.callPackage ./pkgs/base16-shell { };

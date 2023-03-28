@@ -1,5 +1,6 @@
+{ pkgs, ... }:
 self: (
   super: {
-    wsl-open = callPackage ../../pkgs/wsl-open {};
+    wsl-open = pkgs.callPackage ../../pkgs/wsl-open { };
   }
 )
