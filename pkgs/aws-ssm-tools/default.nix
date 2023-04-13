@@ -1,14 +1,14 @@
-{ pkgs ? import <nixpkgs> {}, lib, python3Packages }:
+{ pkgs ? import <nixpkgs> { }, lib, python3Packages }:
 with pkgs;
 python3Packages.buildPythonApplication rec {
   pname = "aws-ssm-tools";
-  version = "1.3.2";
+  version = "1.5.1";
 
   src = fetchFromGitHub {
     owner = "mludvig";
     repo = "aws-ssm-tools";
-    rev = "4194c91557b139fca650f030441aee2af2aaaef9";
-    sha256 = "1vv8qb2b2l81ivfchsvx05saf261rkq3mla4iyvsy66z1rhp1206";
+    rev = "efd8bb405632fa9090b03c3dd3ef0f1cd7804cac";
+    sha256 = "sha256-9YnsmyITwbuzOBhJ+YDLQot/qFlKpyr5pZ8UI9vwNCc=";
   };
 
   propagatedBuildInputs = with python3Packages; [
