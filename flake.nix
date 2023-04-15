@@ -28,6 +28,10 @@
             path = ./templates/devenv-ts;
             description = "Minimal TypeScript project using devenv.";
           };
+          python = {
+            path = ./templates/devenv-python;
+            description = "Minimal Python project using devenv.";
+          };
           default = self.templates.simple;
         };
     };
