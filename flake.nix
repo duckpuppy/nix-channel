@@ -32,6 +32,10 @@
             path = ./templates/devenv-python;
             description = "Minimal Python project using devenv.";
           };
+          rust = {
+            path = ./templates/devenv-rust;
+            description = "Minimal Rust project using devenv.";
+          };
           default = self.templates.simple;
         };
     };
