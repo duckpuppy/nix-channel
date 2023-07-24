@@ -1,62 +1,43 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    systems.url = "github:nix-systems/default";
     devenv.url = "github:cachix/devenv";
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    devenv,
-    ...
-  } @ inputs: let
-    systems = ["x86_64-linux" "i686-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin"];
-    forAllSystems = f:
-      builtins.listToAttrs (map (name: {
-          inherit name;
-          value = f name;
-        })
-        systems);
-  in {
-    devShells =
-      forAllSystems
-      (system: let
-        pkgs = import nixpkgs {
-          inherit system;
-        };
-      in {
-        default = devenv.lib.mkShell {
-          inherit inputs pkgs;
-          modules = [
-            {
-              # https://devenv.sh/basics/
-              env.GREET = "devenv";
+  outputs = { self, nixpkgs, flake-parts, ... } @ inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        inputs.devenv.flakeModule
+      ];
+      systems = import inputs.systems;
 
-              # https://devenv.sh/packages/
-              packages = with pkgs; [
-                git
-                nodejs
-                nodePackages.typescript-language-server
-              ];
-
-              # https://devenv.sh/languages/
-              languages.typescript.enable = true;
-
-              # https://devenv.sh/pre-commit-hooks/
-              pre-commit.hooks.eslint.enable = true;
-              pre-commit.hooks.alejandra.enable = true;
-              # pre-commit.hooks.statix.enable = true;
-              pre-commit.hooks.prettier.enable = true;
-
-              pre-commit.settings.eslint = {
-                extensions = "\\.(ts|js)$";
-              };
-
-              # https://devenv.sh/processes/
-              # processes.ping.exec = "ping example.com";
-            }
+      perSystem = { config, self', inputs', pkgs, system, ... }: {
+        devenv.shells.default = {
+          # https://devenv.sh/reference/options/
+          packages = with pkgs; [
+            git
+            nodejs
+            nodePackages.typescript-language-server
+            yarn
           ];
+
+          devcontainer.enable = true;
+
+          # https://devenv.sh/languages/
+          languages.typescript.enable = true;
+
+          # https://devenv.sh/pre-commit-hooks/
+          pre-commit.hooks.nixfmt.enable = true;
+          pre-commit.hooks.convco.enable = true;
+          pre-commit.hooks.eslint.enable = true;
+          pre-commit.hooks.prettier.enable = true;
+
+          pre-commit.settings.eslint = {
+            extensions = "\\.(ts|js)$";
+          };
         };
-      });
-  };
+      };
+    };
 }
